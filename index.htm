@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div id="mySidenav" class="sidenav">
+      <span class="closebtn" style="cursor: pointer" onclick="nav()">
+        &#9776;
+      </span>
+      <a href="#">Dashboard</a>
+      <a href="#">All Courses</a>
+      <a href="#">Resources</a>
+      <a href="#">Friends</a>
+      <a href="#">Chats</a>
+      <a href="#">Settings</a>
+    </div>
+
+    <div id="main">
+      <div class="input-group col-sm-4">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Pesquisar curso"
+          name="search"
+        />
+        <div class="input-group-btn">
+          <button class="btn btn-default" type="submit">
+            <i class="glyphicon glyphicon-search"></i>
+          </button>
+        </div>
+      </div>
+      <h2>All courses</h2>
+    </div>
+
+    <div id="rightSidenav" class="rightSidenav">
+      <div class="profile row">
+        <img
+          src="https://avatars1.githubusercontent.com/u/1572407?s=460&u=7c3d2540cf30c48cdafe5fec6aef96a5eabba5a5&v=4"
+          class="img-rounded"
+          alt="Profile image"
+          width="50px"
+          height="50px"
+        />
+      </div>
+    </div>
+    <script>
+      function nav() {
+        const width = document.getElementById("mySidenav").style.width;
+        if (width === "250px") {
+          console.log("CLOSE", width);
+          closeNav();
+        } else {
+          console.log("OPEN", width);
+          openNav();
+        }
+      }
+
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "50px";
+        document.getElementById("main").style.marginLeft = "50px";
+      }
+    </script>
+  </body>
+</html>

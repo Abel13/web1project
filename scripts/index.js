@@ -47,9 +47,7 @@ function getCardObj(pokemon) {
       <div class="pokeCard col-sm-3">
         <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/${pokemon.id}.gif" alt="pokémon ${pokemon.name}" />
         <div class="cardInfosContainer">
-          <div  class="cardInfoLine"> 
-            <h2 class="cardTitle">#${(pokemon.id).toString().padStart(3, '0')} ${pokemon.name}</h2>
-          </div>
+          <h2 class="cardTitle">#${(pokemon.id).toString().padStart(3, '0')} ${pokemon.name}</h2>
           <div class="cardInfoLine">
             <p><b>Height:</b> ${pokemon.height}</p>
           </div>

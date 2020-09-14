@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -9,21 +9,26 @@
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
     />
     <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
       rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
     />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+      integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+      crossorigin="anonymous"
+    />
   </head>
-  <body>
+  <body class="body">
     <div id="mySidenav" class="sidenav">
       <span class="closebtn" style="cursor: pointer" onclick="nav()">
         &#9776;
       </span>
-      <a href="#">Dashboard</a>
-      <a href="#">All Courses</a>
+      <a href="#">All Pokémons</a>
       <a href="#">Resources</a>
       <a href="#">Friends</a>
       <a href="#">Chats</a>
@@ -31,11 +36,62 @@
     </div>
 
     <div id="main">
-      <div class="input-group col-sm-4">
+      <div id="carouselSlide" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+          <li
+            data-target="#carouselSlide"
+            data-slide-to="0"
+            class="active"
+          ></li>
+          <li data-target="#carouselSlide" data-slide-to="1"></li>
+          <li data-target="#carouselSlide" data-slide-to="2"></li>
+        </ul>
+
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="https://pokemongolive.com/img/posts/unova-pokemon.jpg"
+              alt="Pokémon Image 1"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://pokemongolive.com/img/posts/gobattleleague-season4.jpg"
+              alt="Pokémon Image 2"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://pokemongolive.com/img/posts/ios10-ios11-android5-discontinued-support.jpg"
+              alt="Pokémon Image 3"
+            />
+          </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a
+          class="carousel-control-prev"
+          href="#carouselSlide"
+          data-slide="prev"
+        >
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a
+          class="carousel-control-next"
+          href="#carouselSlide"
+          data-slide="next"
+        >
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      </div>
+
+      <div id="searchBar" class="input-group col-sm-4">
         <input
           type="text"
           class="form-control"
-          placeholder="Pesquisar curso"
+          placeholder="Pesquisar Pokémon"
           name="search"
         />
         <div class="input-group-btn">
@@ -44,18 +100,29 @@
           </button>
         </div>
       </div>
-      <h2>All courses</h2>
+
+      <h2>All Pokémons</h2>
+      <section class="itemsList">
+        <div class="container" id="cardsList"></div>
+      </section>
+      <script type="text/javascript" src="scripts/index.js"></script>
     </div>
 
     <div id="rightSidenav" class="rightSidenav">
-      <div class="profile row">
-        <img
-          src="https://avatars1.githubusercontent.com/u/1572407?s=460&u=7c3d2540cf30c48cdafe5fec6aef96a5eabba5a5&v=4"
-          class="img-rounded"
-          alt="Profile image"
-          width="50px"
-          height="50px"
-        />
+      <h2>Trainer</h2>
+      <div class="row profile">
+        <div class="col-sm-4">
+          <img
+            src="https://avatars1.githubusercontent.com/u/1572407?s=460&u=7c3d2540cf30c48cdafe5fec6aef96a5eabba5a5&v=4"
+            class="img-rounded"
+            alt="Profile image"
+            width="50px"
+            height="50px"
+          />
+        </div>
+        <div class="col-sm-6">
+          <h4>Abel Dutra</h4>
+        </div>
       </div>
     </div>
     <script>
